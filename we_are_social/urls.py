@@ -17,7 +17,7 @@ PJB Note:
 Importing "views" from more than one app,
 will get a collision unless using aliases with "as".
 Use "name" to avoid hard coding urls on code or inside templates.
-E.g. reverse('index').
+E.g. reverse('index')..
 """
 
 from django.conf.urls import url, include
