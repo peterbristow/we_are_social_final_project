@@ -422,7 +422,9 @@
     "model": "reusable_blog_v1.post",
     "pk": 1,
     "fields": {
-        "author": 1,
+        "author": [
+            "test1@email.com"
+        ],
         "title": "The First Post",
         "content": "This is the first post",
         "created_date": "2016-05-23T16:28:04.049Z",
@@ -436,7 +438,9 @@
     "model": "reusable_blog_v1.post",
     "pk": 2,
     "fields": {
-        "author": 1,
+        "author": [
+            "test1@email.com"
+        ],
         "title": "The Second Post",
         "content": "Here is the second post.",
         "created_date": "2016-05-24T06:06:05.215Z",
@@ -475,7 +479,9 @@
     "pk": 1,
     "fields": {
         "name": "Python: Any thoughts?",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "subject": 1,
         "created_at": "2016-05-24T06:15:28Z"
     }
@@ -485,7 +491,9 @@
     "pk": 2,
     "fields": {
         "name": "Python IDE's - What are your experiences?",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "subject": 2,
         "created_at": "2016-05-24T12:32:10.208Z"
     }
@@ -496,7 +504,9 @@
     "fields": {
         "thread": 1,
         "comment": "<p>So... Python.&nbsp; What do you think about it?</p>",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "created_at": "2016-05-24T06:15:28.992Z"
     }
 },
@@ -506,7 +516,9 @@
     "fields": {
         "thread": 1,
         "comment": "<p>I have been learning it, and it seems quite straight forward.</p>",
-        "user": 3,
+        "user": [
+            "test3@email.com"
+        ],
         "created_at": "2016-05-24T06:52:12.993Z"
     }
 },
@@ -516,7 +528,9 @@
     "fields": {
         "thread": 1,
         "comment": "<p>It has to be said, the logo looks very nice actualy!</p>",
-        "user": 2,
+        "user": [
+            "test2@email.com"
+        ],
         "created_at": "2016-05-24T06:59:25.676Z"
     }
 },
@@ -526,7 +540,9 @@
     "fields": {
         "thread": 1,
         "comment": "<p>Yeah I agree the logo is nice :)&nbsp; :-)</p>",
-        "user": 3,
+        "user": [
+            "test3@email.com"
+        ],
         "created_at": "2016-05-24T07:31:54.228Z"
     }
 },
@@ -536,7 +552,9 @@
     "fields": {
         "thread": 2,
         "comment": "<p>I have used Sublime and Pycharm when developing with Python and Flask.</p>\r\n<p>I favour Pycharm!</p>",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "created_at": "2016-05-24T12:32:10.208Z"
     }
 },
@@ -546,7 +564,9 @@
     "fields": {
         "thread": 2,
         "comment": "<p>Yep, I still agree with what I just posted :)</p>",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "created_at": "2016-05-24T12:33:36.440Z"
     }
 },
@@ -556,7 +576,9 @@
     "fields": {
         "thread": 2,
         "comment": "<p>I like sublime because it is free :)</p>",
-        "user": 2,
+        "user": [
+            "test2@email.com"
+        ],
         "created_at": "2016-05-24T13:16:37.500Z"
     }
 },
@@ -566,7 +588,9 @@
     "fields": {
         "thread": 2,
         "comment": "<p>I like PyCharm!</p>",
-        "user": 3,
+        "user": [
+            "test3@email.com"
+        ],
         "created_at": "2016-05-25T11:29:35.254Z"
     }
 },
@@ -576,7 +600,9 @@
     "fields": {
         "thread": 1,
         "comment": "<p>Here is another one!</p>",
-        "user": 1,
+        "user": [
+            "test1@email.com"
+        ],
         "created_at": "2016-06-10T09:49:39.364Z"
     }
 },
@@ -618,7 +644,9 @@
     "fields": {
         "poll": 1,
         "subject": 1,
-        "user": 1
+        "user": [
+            "test1@email.com"
+        ]
     }
 },
 {
@@ -627,7 +655,9 @@
     "fields": {
         "poll": 1,
         "subject": 2,
-        "user": 2
+        "user": [
+            "test2@email.com"
+        ]
     }
 },
 {
@@ -636,7 +666,9 @@
     "fields": {
         "poll": 1,
         "subject": 1,
-        "user": 3
+        "user": [
+            "test3@email.com"
+        ]
     }
 },
 {
@@ -645,7 +677,9 @@
     "fields": {
         "poll": 1,
         "subject": 1,
-        "user": 4
+        "user": [
+            "test4@email.com"
+        ]
     }
 },
 {
@@ -653,8 +687,13 @@
     "pk": 1,
     "fields": {
         "action_time": "2016-05-21T11:08:41.657Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "1",
         "object_repr": "Kitchen table",
         "action_flag": 1,
@@ -666,8 +705,13 @@
     "pk": 2,
     "fields": {
         "action_time": "2016-05-21T11:10:30.516Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "2",
         "object_repr": "Dining chair",
         "action_flag": 1,
@@ -679,8 +723,13 @@
     "pk": 3,
     "fields": {
         "action_time": "2016-05-21T11:10:47.103Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "1",
         "object_repr": "Dining table",
         "action_flag": 2,
@@ -692,8 +741,13 @@
     "pk": 4,
     "fields": {
         "action_time": "2016-05-21T11:10:59.433Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "2",
         "object_repr": "Dining chair",
         "action_flag": 2,
@@ -705,8 +759,13 @@
     "pk": 5,
     "fields": {
         "action_time": "2016-05-21T11:11:29.587Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "3",
         "object_repr": "Table cloth",
         "action_flag": 1,
@@ -718,8 +777,13 @@
     "pk": 6,
     "fields": {
         "action_time": "2016-05-21T11:12:48.140Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "4",
         "object_repr": "Table runner",
         "action_flag": 1,
@@ -731,8 +795,13 @@
     "pk": 7,
     "fields": {
         "action_time": "2016-05-21T11:13:49.316Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "5",
         "object_repr": "Place mats",
         "action_flag": 1,
@@ -744,8 +813,13 @@
     "pk": 8,
     "fields": {
         "action_time": "2016-05-21T11:14:56.190Z",
-        "user": 1,
-        "content_type": 9,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
         "object_id": "6",
         "object_repr": "Coasters",
         "action_flag": 1,
@@ -757,8 +831,13 @@
     "pk": 9,
     "fields": {
         "action_time": "2016-05-21T12:41:15.143Z",
-        "user": 1,
-        "content_type": 10,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "magazines",
+            "magazine"
+        ],
         "object_id": "1",
         "object_repr": "Django for beginners",
         "action_flag": 1,
@@ -770,8 +849,13 @@
     "pk": 10,
     "fields": {
         "action_time": "2016-05-21T12:43:03.944Z",
-        "user": 1,
-        "content_type": 10,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "magazines",
+            "magazine"
+        ],
         "object_id": "2",
         "object_repr": "Learn Django - Intermediate",
         "action_flag": 1,
@@ -783,8 +867,13 @@
     "pk": 11,
     "fields": {
         "action_time": "2016-05-21T12:43:37.837Z",
-        "user": 1,
-        "content_type": 10,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "magazines",
+            "magazine"
+        ],
         "object_id": "3",
         "object_repr": "Learn Django - Advanced",
         "action_flag": 1,
@@ -796,8 +885,13 @@
     "pk": 12,
     "fields": {
         "action_time": "2016-05-21T12:43:58.660Z",
-        "user": 1,
-        "content_type": 10,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "magazines",
+            "magazine"
+        ],
         "object_id": "1",
         "object_repr": "Learn Django - Beginners",
         "action_flag": 2,
@@ -809,8 +903,13 @@
     "pk": 13,
     "fields": {
         "action_time": "2016-05-23T10:51:54.139Z",
-        "user": 1,
-        "content_type": 12,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "threads",
+            "subject"
+        ],
         "object_id": "1",
         "object_repr": "Python",
         "action_flag": 1,
@@ -822,8 +921,13 @@
     "pk": 14,
     "fields": {
         "action_time": "2016-05-23T10:52:20.586Z",
-        "user": 1,
-        "content_type": 12,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "threads",
+            "subject"
+        ],
         "object_id": "2",
         "object_repr": "Flask",
         "action_flag": 1,
@@ -835,8 +939,13 @@
     "pk": 15,
     "fields": {
         "action_time": "2016-05-23T10:52:49.790Z",
-        "user": 1,
-        "content_type": 12,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "threads",
+            "subject"
+        ],
         "object_id": "3",
         "object_repr": "Django",
         "action_flag": 1,
@@ -848,8 +957,13 @@
     "pk": 16,
     "fields": {
         "action_time": "2016-05-23T10:53:04.223Z",
-        "user": 1,
-        "content_type": 12,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "threads",
+            "subject"
+        ],
         "object_id": "1",
         "object_repr": "Python",
         "action_flag": 2,
@@ -861,8 +975,13 @@
     "pk": 17,
     "fields": {
         "action_time": "2016-05-23T16:28:04.070Z",
-        "user": 1,
-        "content_type": 16,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "reusable_blog_v1",
+            "post"
+        ],
         "object_id": "1",
         "object_repr": "The First Post",
         "action_flag": 1,
@@ -874,8 +993,13 @@
     "pk": 18,
     "fields": {
         "action_time": "2016-05-24T06:06:05.233Z",
-        "user": 1,
-        "content_type": 16,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "reusable_blog_v1",
+            "post"
+        ],
         "object_id": "2",
         "object_repr": "The Second Post",
         "action_flag": 1,
@@ -887,8 +1011,13 @@
     "pk": 19,
     "fields": {
         "action_time": "2016-05-24T06:54:00.415Z",
-        "user": 1,
-        "content_type": 13,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "threads",
+            "thread"
+        ],
         "object_id": "1",
         "object_repr": "Thread object",
         "action_flag": 2,
@@ -900,8 +1029,13 @@
     "pk": 20,
     "fields": {
         "action_time": "2016-05-24T14:22:26.773Z",
-        "user": 1,
-        "content_type": 16,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "reusable_blog_v1",
+            "post"
+        ],
         "object_id": "1",
         "object_repr": "The First Post",
         "action_flag": 2,
@@ -913,8 +1047,13 @@
     "pk": 21,
     "fields": {
         "action_time": "2016-05-24T14:22:37.342Z",
-        "user": 1,
-        "content_type": 16,
+        "user": [
+            "test1@email.com"
+        ],
+        "content_type": [
+            "reusable_blog_v1",
+            "post"
+        ],
         "object_id": "2",
         "object_repr": "The Second Post",
         "action_flag": 2,
