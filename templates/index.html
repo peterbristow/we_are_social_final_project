@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 {% block content %}
-    <h2>Hello, World!</h2>
-    <p>Our very simple site</p>
+
+    <div class="home">
+        <h1>We Are Social</h1>
+        <h3>Exchange ideas to benefit</h3>
+        <h3>both business and society as a whole.</h3>
+        <a href="{% url "about" %}" class="btn btn-primary call-to-action">About</a>
+        <a href="{% url "register" %}" class="btn btn-primary call-to-action">Contribute</a>
+    </div>
+
 {% endblock %}
+{% block body_js %}
+    <script>
+        $(document).ready(function(){
+            $.supersized({
+
+                // Functionality
+                slide_interval: 6000,    // Length between transitions
+                transition: 1,
+                // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                transition_speed: 3000,    // Speed of transition
+
+                // Components
+                slide_links: 'blank',
+                // Individual links for each slide (Options: false, 'number', 'name', 'blank')
+                slides: [      // Slideshow Images
+                    {
+                        image: '{% static "images/pic3.jpg" %}',
+                        title: 'Image of business people.'
+                    },
+                    {
+                        image: '{% static "images/pic1.jpg" %}',
+                        title: 'Image of business people.'
+                    },
+                    {
+                        image: '{% static "images/pic2.jpg" %}',
+                        title: 'Image of business people.'
+                    }
+                ]
+            });
+        });
+    </script>
+{% endblock body_js %}

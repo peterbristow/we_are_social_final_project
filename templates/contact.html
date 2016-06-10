@@ -1,15 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
 
 {% block content %}
-    <form role="form" method="POST" action="{% url 'login' %}">
-        <h2>Login</h2>
+    <h2>Contact</h2>
+    <p>Feel free to message us anytime!</p><br>
+    <form role="form" action="" method="post">
         {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Login</button>
-        </div>
+        {{ form|as_bootstrap }}
+        <button type="submit">Submit</button>
     </form>
 {% endblock %}
 

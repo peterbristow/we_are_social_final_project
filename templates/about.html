@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h2>About</h2>
+    <p>Social Entrepreneurship site that allows for the exchange of ideas that benefit both businesses and society as a whole.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <br />
+    <div class="col-md-12">
+        <div id="map-container"></div>
+    </div>
+{% endblock %}
+
+{% block body_js %}
+    <script>
+        $(document).ready(function(){
+            $.supersized({
+                // Components
+                slide_links: 'blank',
+                // Individual links for each slide (Options: false, 'number', 'name', 'blank')
+                slides: [      // Slideshow Images
+                    {
+                        image: '{% static "images/peopleandideas.png" %}',
+                        title: 'Image of people thinking of stuff.'
+                    }
+                ]
+            });
+        });
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbpOEHNPWITmJ646PObm43Wd5wBVv1Lbw&callback=initMap" type="text/javascript"></script>
+    <script>
+        function initMap() {
+            var var_location = new google.maps.LatLng(51.277283, -0.842655);
+
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "Fleet"
+            });
+
+            var_marker.setMap(var_map);
+        }
+    </script>
+{% endblock body_js %}

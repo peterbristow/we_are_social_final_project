@@ -4,9 +4,10 @@
 {% block content %}
 
     <div class="row header">
-        <div class="container">
+        <div class="container thread">
             <h2>{{ thread.name }}</h2>
             <div class="col-md-12">
+                <div class="col-md-9">
                 <table class="table">
                     <tbody>
                     <tr>
@@ -27,6 +28,7 @@
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
 
             {% if thread.poll %}
@@ -43,8 +45,27 @@
         </div>
     </div>
     <div class="container">
+        <br>
         {% for post in thread.posts.all %}
             {% include "forum/post.html" %}
         {% endfor %}
     </div>
 {% endblock %}
+
+{% block body_js %}
+    <script>
+        $(document).ready(function(){
+            $.supersized({
+                // Components
+                slide_links: 'blank',
+                // Individual links for each slide (Options: false, 'number', 'name', 'blank')
+                slides: [      // Slideshow Images
+                    {
+                        image: '{% static "images/peopleandideas.png" %}',
+                        title: 'Image of people thinking of stuff.'
+                    }
+                ]
+            });
+        });
+    </script>
+{% endblock body_js %}

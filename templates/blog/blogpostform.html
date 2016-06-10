@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% load bootstrap_tags %}
 {% load staticfiles %}
 
 {% block content %}
-    <form role="form" method="POST" action="{% url 'login' %}">
-        <h2>Login</h2>
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-    </form>
+    <div class="blogpostform">
+        {% load bootstrap_tags %}
+        <h2>Add A Post</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn- btn-info">Save</button>
+        </form>
+    </div>
 {% endblock %}
 
 {% block body_js %}

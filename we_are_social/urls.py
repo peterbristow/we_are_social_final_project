@@ -26,7 +26,7 @@ from .settings import MEDIA_ROOT
 from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from accounts import views as accounts_views  # aliases: see above note
-from home import views as home_views
+from pages import views as pages_views
 from products import views as product_views
 from magazines import views as magazine_views
 from threads import views as forum_views
@@ -37,7 +37,11 @@ from threads import api_views as thread_api_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
-    url(r'^$', home_views.get_index, name='index'),
+
+    # Pages URLs
+    url(r'^$', pages_views.get_index, name='index'),
+    url(r'^about$', pages_views.about, name='about'),
+    url(r'^contact$', pages_views.contact, name='contact'),
 
     # Auth URLs
     url(r'^register/$', accounts_views.register, name='register'),

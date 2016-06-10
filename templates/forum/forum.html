@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% load thread_extras %}
+{% load staticfiles %}
+
 {% block content %}
    {% load bootstrap_tags %}
    {% for subject in subjects %}
-       <section class="subject">
-           <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+       <h2>Forum & Polls</h2>
+       <section class="subject forum">
+           <h2><a style="color:#48befc;" href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
            <p>
                <a href="{% url 'threads' subject.id %}">
                    {% autoescape off %}{{ subject.description }}{% endautoescape %}
@@ -23,3 +26,21 @@
        </section>
    {% endfor %}
 {% endblock %}
+
+{% block body_js %}
+    <script>
+        $(document).ready(function(){
+            $.supersized({
+                // Components
+                slide_links: 'blank',
+                // Individual links for each slide (Options: false, 'number', 'name', 'blank')
+                slides: [      // Slideshow Images
+                    {
+                        image: '{% static "images/peopleandideas.png" %}',
+                        title: 'Image of people thinking of stuff.'
+                    }
+                ]
+            });
+        });
+    </script>
+{% endblock body_js %}

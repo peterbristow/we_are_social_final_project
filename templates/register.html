@@ -18,7 +18,7 @@
             <div class="alert-message block-message error" id="stripe-error-message"></div>
         </div>
 
-        <legend>Create a new account</legend>
+        <h2>Create a new account</h2>
         {% csrf_token %}
         {{ form|as_bootstrap }}
         <div class="form-group">
@@ -27,3 +27,22 @@
         </div>
     </form>
 {% endblock %}
+
+{% block body_js %}
+    <script>
+        $(document).ready(function(){
+            $.supersized({
+                // Components
+                slide_links: 'blank',
+                // Individual links for each slide (Options: false, 'number', 'name', 'blank')
+                slides: [      // Slideshow Images
+                    {
+                        image: '{% static "images/peopleandideas.png" %}',
+                        title: 'Image of people thinking of stuff.'
+                    }
+                ]
+            });
+        });
+    </script>
+{% endblock body_js %}
+
