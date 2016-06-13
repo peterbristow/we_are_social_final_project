@@ -1,7 +1,5 @@
-Contact Name:
+Contact Name: {{ contact_name }}
 
+Email: {{ contact_email }}
 
-Email:
-
-
-Content:
+Content: {{ message }}

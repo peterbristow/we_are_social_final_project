@@ -126,8 +126,12 @@ MEDIA_URL = '/media/'
 
 # Email: local settings
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = '%s/CodeInstitute/Django_files/we_are_social/emails' % HOME_DIR
+#EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = "sgbackend.SendGridBackend"
+EMAIL_FILE_PATH = '%s/we_are_social_final_project/emails' % BASE_DIR
 
 # tinymce settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
+
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')

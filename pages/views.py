@@ -30,11 +30,11 @@ def contact(request):
 
             # Send email
             template = get_template('contact_template.txt')
-            context = Context({
+            context = {
                 'contact_name': contact_details.contact_name,
                 'contact_email': contact_details.contact_email,
-                'form_content': contact_details.message,
-            })
+                'message': contact_details.message,
+            }
             content = template.render(context)
 
             email = EmailMessage(

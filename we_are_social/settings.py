@@ -155,8 +155,11 @@ MEDIA_URL = '/media/'
 
 # Email: local settings
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = "sgbackend.SendGridBackend"
 EMAIL_FILE_PATH = '%s/CodeInstitute/Django_files/we_are_social/emails' % HOME_DIR
+
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
 
 # tinymce settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
@@ -180,3 +183,4 @@ PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
 # then add the http url as follows:
 # PAYPAL_NOTIFY_URL = 'http://48c2abb8.ngrok.io/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'peterjb73+1@gmail.com'
+SENDGRID_API_KEY = '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'
