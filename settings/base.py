@@ -134,4 +134,5 @@ EMAIL_FILE_PATH = '%s/we_are_social_final_project/emails' % BASE_DIR
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
 SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
 
-SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+#SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+SENDGRID_API_KEY = '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'
